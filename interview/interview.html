@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let str = 'this is a good place!'
+    // let end = str.length
+    // let start = 0
+    // let newStr = ""
+    // for (let i = end - 1; i >= 0; i--) {
+    //     if (str.charAt(i) == ' ') {
+    //         start = i + 1
+    //         newStr += str.substring(start, end) + ' '
+    //         console.log(newStr)
+    //         end = i
+    //     }
+    //     if (i == 0) {
+    //         newStr += str.substring(0, end)
+    //     }
+    // }
+    // console.log(newStr)
+    // function calc(n) {
+    //     let arr = []
+    //     for (let i = arr.length; i <= n; i++) {
+    //         if (i <= 2) {
+    //             arr.push(1)
+    //         } else {
+    //             arr[i] = arr[i - 1] + arr[i - 2]
+    //         }
+    //     }
+    //     arr.splice(0, 1)
+    //     return arr
+    // }
+    // calc(7)
+    
+    // 字符串_为驼峰命名
+    // let str = 'abc_edf_gh'
+    // function toCameralName (str) {
+    //     let strArr = str.split('')
+    //     if (strArr.indexOf('_') >= 0) {
+    //         strArr[strArr.indexOf('_') + 1] = strArr[strArr.indexOf('_') + 1].toUpperCase()
+    //         strArr.splice(strArr.indexOf('_'), 1)
+    //         return toCameralName(strArr.join(''))
+    //     } else {
+    //         return strArr.join('')
+    //     }
+    // }
+
+    // let obj = {
+    //     name_space: 1,
+    //     name_array: [
+    //         {
+    //             s_str: 1,
+    //             a_arr: [2,3,4],
+    //             o_obj: [{
+    //                 a_name: 123,
+    //                 b_type: '1232'
+    //             }]
+    //         }
+    //     ],
+    //     name_object: {
+    //         work_space: '123'
+    //     }
+    // }
+
+    // function changeObjectKey (obj) {
+    //     for (let i in obj) {
+    //         if (i.indexOf('_') >= 0) {
+    //             obj[toCameralName(i)] = obj[i]
+    //             delete obj[i]
+    //         }
+    //     }
+    //     for (let i in obj) {
+    //         if (typeof obj[i] === 'object') {
+    //             changeObjectKey(obj[i])
+    //         }
+    //     }
+    //     return obj
+    // }
+
+    // console.log(changeObjectKey(obj))
+
+    // 获取数组中第n大的数
+    // let arr = [1,2,3,4,5,6,7,823,23,32,312,43]
+    // function getMax(n, arr) {
+    //     for (let i = 0; i < n; i++) {
+    //         if (i == (n - 1)) {
+    //             return Math.max.apply(Math, arr)
+    //         }
+    //         arr.splice(arr.indexOf(Math.max.apply(Math, arr)), 1)
+    //     }
+    // }
+    // console.log(getMax(4, arr))
+
+    // K = M + N，给定一个K值，在数组中找到对应匹配的M和N, 提示数组也有地址引用
+    // function getPairs(k, arr) {
+    //     let M, N
+    //     for (let i = arr.length; i >= 0; i--) {
+    //         let M = k - arr[i]
+    //         subArr = JSON.parse(JSON.stringify(arr))
+    //         subArr.splice(i, 1)
+    //         if (subArr.indexOf(M) >= 0) {
+    //             N = arr[i]
+    //             return [M, N]
+    //         }
+    //     }
+    // }
+    // let K = 10, arr = [1,2,3,4,6,7,8,9]
+    // console.log(getPairs(K, arr))
+
+
+    // 二叉树
+
+
+
+    
+
+    // let observeObject = {
+    //     // events存放的是所有订阅者的相关信息key=>id,value=>[cb]
+    //     events: {
+
+    //     },
+    //     publish: function () {
+    //         let args = Array.prototype.slice.call(arguments)
+    //         let id = args[0]
+    //         if (id in this.events) {
+    //             this.events[id].forEach(fn => {
+    //                 fn.apply(this, args.splice(1, args.length - 1));
+    //             })
+    //         } else {
+    //             console.log('没有订阅者订阅此消息')
+    //         }
+    //     },
+    //     // 订阅信息id是消息名称, cb是对应id要执行函数
+    //     subcribe: function (id, cb) {
+    //         if (this.events[id]) {
+    //             this.events[id].push(cb)
+    //         } else {
+    //             this.events[id] = [cb]
+    //         }
+    //     }
+    // }
+
+    // // 订阅消息
+    // observeObject.subcribe('msg', function (n) {
+    //     console.log(observeObject.events)
+    //     console.log('我接受到了msg的消息,消息的内容是' + n)
+    // })
+    // observeObject.subcribe('call', function (n) {
+    //     console.log(observeObject.events)
+    //     console.log('我接受到了call的消息,消息的内容是' + n)
+    // })
+
+    // // 发布消息
+    // observeObject.publish('call', 1)
+
+  
+</script>
+</body>
+</html>
