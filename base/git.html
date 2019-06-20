@@ -7,6 +7,79 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        /**
+        * 1.git init                                                    初始化git仓库，生成.git文件
+        * 2.git config --global user.name/email + 'name/email'          配置git仓库用户名和邮箱
+        * 3.git help                                                    获取git帮助，git help <command>或者git <command> --help获取具体某个<command>指令的帮助
+        * 4.ignore files                                                设置git提交时忽略的文件
+                                                                        配置语法：   1.以斜杠“/”开头表示目录；
+                                                                                    2.以星号“*”通配多个字符；
+                                                                                    3.以问号“?”通配单个字符
+                                                                                    4.以方括号“[]”包含单个字符的匹配列表；
+                                                                                    5.以叹号“!”表示不忽略(跟踪)匹配到的文件或目录。
+                                                                                    注意： git 对于 .gitignore配置文件是按行从上到下进行规则匹配的
+                                                                                          如果你创建.gitignore文件之前就push了某一文件，那么即使你在.gitignore文件中写入过滤该文件的规则，该规则也不会起作用，git仍然会对该文件进行版本管理
+
+
+        * 5.git add                                                      将文件加入缓存区
+                                                                         配置语法：  1.git add filename  添加某个具体的文件到缓存区
+                                                                                    2.git add path      添加某个路径下的所有文件
+                                                                                    3.git add .         添加所有修改的文件
+        
+        * 6.git branch                                                   该命令用于管理分支。可以查看，修改，创建，删除分支
+                                                                         配置语法：  1. git branch -a    查看所有分支
+                                                                                    2. git branch newBranch    注意初始化的git仓库必须在第一次commit之后才能创建新分支
+                                                                                    3. git branch -d branchName   删除分支
+                                                                                    4. git branch -m oldname newname 修改分支名称
+
+        * 7.git tag                                                      该命令用于查看设置git仓库的快照设置标志
+                                                                         配置语法：  1. git tag 查看标签
+                                                                                    2. git tag -a v1.0 -m 'my version 1.0' 创建可标注tag -a表示可标注， -m选项加一个说明
+                                                                                    3. git show v2.0 显示某个标签相关的信息
+                                                                                    4. git push origin v2.0  把本端的标签v2.0推送到远端
+                                                                                    5. git push origin --tags 推送所有的标签版本到远端
+
+        * 8.git checkout                                                 切换分支 git checkout branchname, git checkout -b 'branchname'创建并切换到该分支
+
+        * 9.git clone                                                    git clone URI克隆远端git仓库至本地。并且为新创建的仓库中的所有分支绑定对应的远端分支 
+                                                                         git clone --depth n URI 表示克隆最近的版本数depth n
+
+        * 10.git commit                                                  将缓存区中的内容添加到git仓库
+        
+        * 11.git diff                                                    显示工作目录，缓存区，当前git库版本之间的差异
+                                                                         git diff --cached   缓存区与当前git版本库之间的差异
+                                                                         git diff HEAD       显示工作目录与当前git库版本之间的差异
+
+        * 12.git grep                                                    快速查找git库的内容    git grep 'content'
+
+        * 13.git log                                                     显示提交到git仓库的记录信息
+
+        * 14.git merge                                                  git merge branchname 合并分支到当前分支
+
+        * 15.git mv                                                     修改文件名或者移动文件 git mv ./path/file ./newpath/file 移动文件
+                                                                        git mv -f ./path/filename ./path/newfilename  修改文件名称
+
+        * 16.git pull                                                   拉取远端分支 git pull -rebase 合并到本端分支，出现冲突则创建新的分支
+
+        * 17.git push                                                   推送本地分支到远端 git push -u origin master -u是把本地master分支绑定到远端本地分支
+
+        * 18.git stash                                                  保存当前暂存区(Index)与工作目录中的变更内容到git中的某个存储区域。再必要的时候，可以取出这些变更并合并到当前工作目录与暂存区（Index）
+                                                                        如果工作区由变更为保存，而执行pull操作会报错。因此需要先用stash保存修改，并使得工作区变为“干净”状态。此时可以执行pull操作。
+                                                                        配置语法：1.git stash list列出所有存储的修改
+        *                                                                        2.git stash pop 弹出堆栈顶部的修改，并实施于工作目录或者暂存区
+                                                                                 3.git stash apply 只修改不弹出
+                                                                                 4.git stash apply stash@{1}
+                                                                                 5.git stash drop 抛弃/删除堆栈顶部的修改
+
+        * 19.git rebase                                                 把一个分支上的提交转移到另外一个分支上，有可能会把两个分支合并成一个 git rebase master otherbranch
+
+        * 20.git reset                                                  复位，变更当前的HEAD某个版本，也可以根据HEAD指向的内容，更新存储区或工作目录
+
+        * 21.git revert                                                 版本回退 git revert <version>
+
+        * 22.git rm                                                     删除文件
+        */
+    </script>
 </body>
 </html>
