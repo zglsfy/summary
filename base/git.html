@@ -67,7 +67,7 @@
         * 18.git stash                                                  保存当前暂存区(Index)与工作目录中的变更内容到git中的某个存储区域。再必要的时候，可以取出这些变更并合并到当前工作目录与暂存区（Index）
                                                                         如果工作区由变更为保存，而执行pull操作会报错。因此需要先用stash保存修改，并使得工作区变为“干净”状态。此时可以执行pull操作。
                                                                         配置语法：1.git stash list列出所有存储的修改
-        *                                                                        2.git stash pop 弹出堆栈顶部的修改，并实施于工作目录或者暂存区
+                                                                                 2.git stash pop 弹出堆栈顶部的修改，并实施于工作目录或者暂存区
                                                                                  3.git stash apply 只修改不弹出
                                                                                  4.git stash apply stash@{1}
                                                                                  5.git stash drop 抛弃/删除堆栈顶部的修改
