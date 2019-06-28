@@ -32,7 +32,6 @@ export default {
     methods: {
         openFolder () {
             this.isOpen = !this.isOpen
-            this.$refs['tree-box'].style.height = this.$refs['tree-box'].scrollHeight
         }
     }
 }
