@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <router-view/>
-    <sv-input v-model="username" placeholder="place input you username">
+    <router-link to='/'>home</router-link>
+    <router-link to='/about'>about</router-link>
+    <router-view></router-view>
+    <!-- <sv-input v-model="username" placeholder="place input you username">
       <template v-slot:beforeAppend>Username:</template>
       <template v-slot:afterAppend>submit</template>
     </sv-input>
@@ -9,7 +11,7 @@
       <template v-slot:beforeAppend>Password:</template>
       <template v-slot:afterAppend>submit</template>
     </sv-input>
-    {{username + password}}
+    {{username + password}} -->
   </div>
 </template>
 

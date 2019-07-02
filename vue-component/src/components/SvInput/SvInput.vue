@@ -37,6 +37,7 @@ export default {
         height: 32px;
         line-height: 32px;
         width: 200px;
+        border-radius: 3px;
         box-sizing: border-box;
         padding: 0 10px;
         float: left;
